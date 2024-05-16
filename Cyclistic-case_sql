@@ -1,1 +1,24 @@
+-- About the Company
+
+-- Cyclistic launched a successful bike-share offering in 2016. Since then the program has grown to a fleet of 5,824 bicycles that geotracked and locked into a network of 692 stations across Chicago.
+
+-- Moreno the director of Marketing has set a clear goal: 
+--  Design marketing strategies aimed at converting casual riders into annual members. 
+--  In order to do that, however, the team needs to better understand how annual members and casual riders differ, why casual riders would buy a membership, and how digital media could affect their marketing tactics.
+--  Moreno and her team are interested in analyzing the Cyclistic historical bike trip data to identify trends.
+
+-- Summary of the Goal
+
+-- Profitability of Annual Members: 
+--  Cyclistic’s finance analysts have determined that annual members are significantly more profitable than casual riders. 
+--  This insight drives the company’s future success strategy.
+
+-- Conversion Opportunity: 
+--  Rather than targeting new customers, Cyclistic aims to convert casual riders into annual members. 
+--  These casual riders are already familiar with Cyclistic and have chosen the service for their mobility needs.
+
+-- Understanding Differences: 
+--  To achieve this goal, the marketing team plans to analyze historical bike trip data. 
+--  They seek insights into how annual members and casual riders use Cyclistic bikes differently. 
+--  Additionally, they want to understand why casual riders might consider purchasing an annual membership.
 
