@@ -39,3 +39,5 @@ into table `202306-divvy-tripdata-copy1`
 fields terminated by','
 LINES TERMINATED BY '\r'
 ignore 1 lines;
+
+
