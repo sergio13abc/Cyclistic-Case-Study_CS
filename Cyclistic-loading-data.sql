@@ -24,15 +24,18 @@
 --  They seek insights into how annual members and casual riders use Cyclistic bikes differently. 
 --  Additionally, they want to understand why casual riders might consider purchasing an annual membership.
 
+/*Tables we are going to use to load the data from the CSV file*/
 create table `divvy-tripdata202302-copy1` (
 ride_id text, rideable_type text,	started_at datetime,	ended_at datetime,	start_station_name text,	start_station_id text,	end_station_name text,	end_station_id text,	start_lat double,	start_lng double,	end_lat double,	end_lng double,	member_casual text);
 
 alter table `divvy-tripdata202302-copy1`
 modify column end_lat double NULL;
 
+/*Check where the secure file priv. is located and if it's enabled*/
 SHOW VARIABLES LIKE 'secure_file_priv';
 select @@secure_file_priv;
 
+/*Start importing the data from the CSV files to Mysql making sure the data is properly loaded with the delimiters*/
 LOAD DATA INFILE
 'C:\\Users\\sm_na\\OneDrive\\Escritorio\\Course\\Coursera\\Project\\202306-divvy-tripdata_NO_BLANKS.csv'
 into table `202306-divvy-tripdata-copy1` 
