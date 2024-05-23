@@ -1,6 +1,6 @@
 /* create and alter the main table we are going to use to merge all the tables we imported */
 create table `divvy-tripdata-merge-dataset` (
-ride_id text, rideable_type text,	started_at datetime,	ended_at datetime,	start_station_name text,	start_station_id text,	end_station_name text,	end_station_id text,	start_lat double,	start_lng double,	end_lat double,	end_lng double,	member_casual text);
+ride_id text, rideable_type varchar(50),	started_at datetime,	ended_at datetime,	start_station_name text,	start_station_id text,	end_station_name text,	end_station_id text,	start_lat double,	start_lng double,	end_lat double,	end_lng double,	member_casual text);
 
 alter table `divvy-tripdata-merge-dataset`
 modify column end_lat double NULL;
