@@ -1,11 +1,26 @@
-/*altering the tables and adding columns to explore the dataset later when merged*/
+/*The tables we are going to use to load the data from the CSV files*/
+create table `divvy-tripdata202404` 
+  ( ride_id text, rideable_type varchar(50),	started_at datetime,	ended_at datetime,	start_station_name text,	start_station_id text,	end_station_name text,	end_station_id text,	start_lat double,	start_lng double,	end_lat double,	end_lng double,	member_casual varchar(20)
+  );
 
--- MODIFY TABLES
 alter table `divvy-tripdata202404`
-modify column rideable_type varchar(20);
+modify column end_lat double NULL;
 
-alter table `divvy-tripdata202404`
-modify column member_casual varchar(20);
+/*Check where the secure file priv. is located and if it's enabled*/
+SHOW VARIABLES LIKE 'secure_file_priv';
+
+/* Make sure to select the secure file pri. if enabled select it else ignore it*/
+select @@secure_file_priv;
+
+/*Start importing the data from the CSV files to Mysql making sure the data is properly loaded with the correct delimiters*/
+LOAD DATA INFILE
+'C:\\Users\\sm_na\\OneDrive\\Escritorio\\Course\\Coursera\\Project\\202404-divvy-tripdata.csv'
+into table `divvy-tripdata202404` 
+fields terminated by','
+LINES TERMINATED BY '\r'
+ignore 1 lines;
+
+/*Adding columns and them updating them to explore the dataset later when merged*/
 
 -- ADD TABLES
 alter table `divvy-tripdata202404`
