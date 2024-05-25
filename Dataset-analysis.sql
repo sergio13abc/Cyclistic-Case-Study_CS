@@ -1,3 +1,50 @@
+/*altering the tables and adding columns to explore the dataset later when merged*/
+
+-- MODIFY TABLES
+alter table `divvy-tripdata202404`
+modify column rideable_type varchar(20);
+
+alter table `divvy-tripdata202404`
+modify column member_casual varchar(20);
+
+-- ADD TABLES
+alter table `divvy-tripdata202404`
+add column started_at_time time;
+
+alter table `divvy-tripdata202404`
+add column ended_at_time time;
+
+alter table `divvy-tripdata202404`
+add column ride_length time;
+
+alter table `divvy-tripdata202404`
+add column day_of_week int;
+
+alter table `divvy-tripdata202404`
+add column day_of_week_name varchar(20);
+
+-- UPDATE TABLES
+update `divvy-tripdata202404`
+set started_at_time = time(started_at);
+
+update `divvy-tripdata202404`
+set ended_at_time = time(ended_at);
+
+update `divvy-tripdata202404`
+set ride_length = timediff(ended_at_time, started_at_time);
+
+update `divvy-tripdata202404`
+set day_of_week = weekday(started_at);
+
+update `divvy-tripdata202404`
+set day_of_week_name = dayname(started_at);
+
+
+
+
+
+
+
 /* create and alter the main table we are going to use to merge all the tables we imported */
 create table `divvy-tripdata-merge-dataset` (
 ride_id text, rideable_type varchar(50),	started_at datetime,	ended_at datetime,	start_station_name text,	start_station_id text,	end_station_name text,	end_station_id text,	start_lat double,	start_lng double,	end_lat double,	end_lng double,	member_casual varchar(20),
