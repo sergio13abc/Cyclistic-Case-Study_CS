@@ -97,3 +97,23 @@ select * from `divvy-tripdata202403`;
 
 INSERT INTO `divvy-tripdata-merge-dataset`(ride_id, rideable_type, started_at,	ended_at,	start_station_name,	start_station_id, end_station_name,	end_station_id,	start_lat,	start_lng, end_lat,	end_lng, member_casual, started_at_time, ended_at_time, ride_length, day_of_week, day_of_week_name)
 select *from `divvy-tripdata202304`;
+
+/* EXPLORATION & MANIPULATION OF MAIN DATASET*/
+
+-- Type of riders
+select distinct member_casual from `divvy-tripdata-merge-dataset` where member_casual <>" " 
+and member_casual is not null;
+--Type of bikes to ride
+select distinct rideable_type from `divvy-tripdata-merge-dataset`
+where rideable_type <>" " 
+and rideable_type is not null;
+--Day of the week with the most frequent use of bikes
+select count(*) as count_days, day_of_week_name from `divvy-tripdata-merge-dataset`
+where day_of_week_name <>" " 
+and day_of_week_name is not null
+group by day_of_week_name
+order by count_days desc;
+--Average ride length
+select sec_to_time(avg(time_to_sec(ride_length))) AS avg_ride_length from `divvy-tripdata-merge-dataset`;
+
+
