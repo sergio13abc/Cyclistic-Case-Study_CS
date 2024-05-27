@@ -130,5 +130,21 @@ group by day_of_week_name
 order by count_days desc;
 --Average ride length
 select sec_to_time(avg(time_to_sec(ride_length))) AS avg_ride_length from `divvy-tripdata-merge-dataset`;
+-- Month with most frequent rides
+select date_format(started_at, '%M') as month_name, count(*) as frequency from `divvy-tripdata-merge-dataset`
+where started_at is not null
+group by month_name
+order by frequency desc;
+-- the most rides by type of bikes
+select distinct rideable_type, count(*) as frequency from `divvy-tripdata-merge-dataset`
+where rideable_type is not null 
+group by rideable_type
+order by frequency desc;
+-- the most rides by type of rider
+select distinct member_casual, count(*) as frequency from `divvy-tripdata-merge-dataset`
+where member_casual is not null
+group by member_casual
+order by frequency desc;
+
 
 
