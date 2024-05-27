@@ -9,7 +9,7 @@ modify column end_lat double NULL;
 /*Check where the secure file priv. is located and if it's enabled*/
 SHOW VARIABLES LIKE 'secure_file_priv';
 
-/* Make sure to select the secure file pri. if enabled select it else ignore it*/
+/* Make sure to select the secure file priv. if enabled select it else ignore it*/
 select @@secure_file_priv;
 
 /*Start importing the data from the CSV files to Mysql making sure the data is properly loaded with the correct delimiters*/
@@ -20,7 +20,7 @@ fields terminated by','
 LINES TERMINATED BY '\r'
 ignore 1 lines;
 
-/*Adding columns and them updating them to explore the dataset later when merged*/
+/*Adding columns and then updating them to explore the dataset later when merged*/
 
 -- ADD TABLES
 alter table `divvy-tripdata202404`
@@ -174,8 +174,21 @@ where member_casual is not null
 group by member_casual
 order by avg_ride_length desc;
 
--- weekday with the most frequency by type of riders 
+-- weekday with the most frequency by casual riders 
+select count(*) as count_days, day_of_week_name, member_casual from `divvy-tripdata-merge-dataset`
+where day_of_week_name <>" " 
+and day_of_week_name is not null
+and member_casual = "casual"
+group by day_of_week_name, member_casual
+order by count_days desc;
 
+-- weekday with the most frequency by member riders 
+select count(*) as count_days, day_of_week_name, member_casual from `divvy-tripdata-merge-dataset`
+where day_of_week_name <>" " 
+and day_of_week_name is not null
+and member_casual = "member"
+group by day_of_week_name, member_casual
+order by count_days desc;
 
 
 
