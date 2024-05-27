@@ -118,33 +118,64 @@ select *from `divvy-tripdata202304`;
 -- Type of riders
 select distinct member_casual from `divvy-tripdata-merge-dataset` where member_casual <>" " 
 and member_casual is not null;
+
 --Type of bikes to ride
 select distinct rideable_type from `divvy-tripdata-merge-dataset`
 where rideable_type <>" " 
 and rideable_type is not null;
+
 --Day of the week with the most frequent use of bikes
 select count(*) as count_days, day_of_week_name from `divvy-tripdata-merge-dataset`
 where day_of_week_name <>" " 
 and day_of_week_name is not null
 group by day_of_week_name
 order by count_days desc;
+
 --Average ride length
 select sec_to_time(avg(time_to_sec(ride_length))) AS avg_ride_length from `divvy-tripdata-merge-dataset`;
+
 -- Month with most frequent rides
 select date_format(started_at, '%M') as month_name, count(*) as frequency from `divvy-tripdata-merge-dataset`
 where started_at is not null
 group by month_name
 order by frequency desc;
+
 -- the most rides by type of bikes
 select distinct rideable_type, count(*) as frequency from `divvy-tripdata-merge-dataset`
 where rideable_type is not null 
 group by rideable_type
 order by frequency desc;
+
 -- the most rides by type of rider
 select distinct member_casual, count(*) as frequency from `divvy-tripdata-merge-dataset`
 where member_casual is not null
 group by member_casual
 order by frequency desc;
+
+-- month with the most casual riders
+select date_format(started_at, '%M') as month_name, count(*) as frequency from `divvy-tripdata-merge-dataset`
+where member_casual = "casual" and
+started_at is not null
+and started_at between '2023-02-01' and '2024-01-30'
+group by month_name
+order by frequency desc;
+
+-- month with the most member riders
+select date_format(started_at, '%M') as month_name, count(*) as frequency from `divvy-tripdata-merge-dataset`
+where member_casual = "member" and
+started_at is not null
+and started_at between '2023-02-01' and '2024-01-30'
+group by month_name
+order by frequency desc;
+
+-- average ride length by type of rider
+select sec_to_time(avg(time_to_sec(ride_length))) AS avg_ride_length, member_casual from `divvy-tripdata-merge-dataset`
+where member_casual is not null
+group by member_casual
+order by avg_ride_length desc;
+
+-- weekday with the most frequency by type of riders 
+
 
 
 
