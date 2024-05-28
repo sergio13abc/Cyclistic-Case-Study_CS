@@ -134,6 +134,9 @@ order by count_days desc;
 --Average ride length
 select sec_to_time(avg(time_to_sec(ride_length))) AS avg_ride_length from `divvy-tripdata-merge-dataset`;
 
+-- Max ride length
+select max(ride_length) as max_ride_length from `divvy-tripdata-merge-dataset`;
+
 -- Month with most frequent rides
 select date_format(started_at, '%M') as month_name, count(*) as frequency from `divvy-tripdata-merge-dataset`
 where started_at is not null
