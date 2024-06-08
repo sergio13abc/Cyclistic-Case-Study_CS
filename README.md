@@ -9,10 +9,18 @@ Feedback is gladly welcome!!
 #### In each of the steps I will be showing how I complete 
 
 
-##ASK
+### ASK
 <https://github.com/sergio13abc/Cyclistic-Case-Study_CS/blob/034556d69d8fde4fc1ab072aa906a024bc7822ce/Dataset-analysis.sql>
-PREPARE
-PROCESS
-ANALYZE
-SHARE
-ACT
+
+### PREPARE
+<https://github.com/sergio13abc/Cyclistic-Case-Study_CS/blob/034556d69d8fde4fc1ab072aa906a024bc7822ce/Dataset-analysis.sql>
+### PROCESS
+<https://github.com/sergio13abc/Cyclistic-Case-Study_CS/blob/034556d69d8fde4fc1ab072aa906a024bc7822ce/Dataset-analysis.sql>
+
+### ANALYZE
+<https://github.com/sergio13abc/Cyclistic-Case-Study_CS/blob/034556d69d8fde4fc1ab072aa906a024bc7822ce/Dataset-analysis.sql>
+### SHARE
+<https://public.tableau.com/views/Main_viz_17176422598950/time?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link>
+<https://public.tableau.com/views/Main_viz/quantity?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link>
+### ACT
+<medieum>
