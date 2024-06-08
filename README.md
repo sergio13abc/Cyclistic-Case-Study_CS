@@ -8,7 +8,10 @@ Feedback is gladly welcome!!
 
 ## Steps:
 
-### ASK, PREPARE, PROCESS, and ANALYZE
+### ASK
+<https://medium.com/@sergio21landaeta/cyclistic-bike-share-data-analyst-project-ac4bde88d656>
+
+### PREPARE, PROCESS, and ANALYZE
 <https://github.com/sergio13abc/Cyclistic-Case-Study_CS/blob/034556d69d8fde4fc1ab072aa906a024bc7822ce/Dataset-analysis.sql>
 
 ### SHARE
