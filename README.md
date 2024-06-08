@@ -4,4 +4,12 @@ My project for the Google Data Analytic Program uses the Cyclistic bike-share an
 
 The project is following the Google 6-step data analyst process: ASK, PREPARE, PROCESS, ANALYZE, SHARE, and ACT.
 
-### In each of the steps I will be showing how I complete 
+#### In each of the steps I will be showing how I complete 
+
+##ASK
+<https://github.com/sergio13abc/Cyclistic-Case-Study_CS/edit/main/README.md>
+PREPARE
+PROCESS
+ANALYZE
+SHARE
+ACT
