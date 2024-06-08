@@ -6,8 +6,7 @@ The project is following the Google 6-step data analyst process: ASK, PREPARE, P
 In this README file, I will share the links to each one of the steps made in this project, I hope you enjoy my work and leave a review if possible.
 Feedback is gladly welcome!!
 
-#### In each of the steps I will be showing how I complete 
-
+## Steps:
 
 ### ASK
 <https://github.com/sergio13abc/Cyclistic-Case-Study_CS/blob/034556d69d8fde4fc1ab072aa906a024bc7822ce/Dataset-analysis.sql>
@@ -26,4 +25,4 @@ Feedback is gladly welcome!!
 <https://public.tableau.com/views/Main_viz/quantity?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link>
 
 ### ACT
-<medieum>
+<https://medium.com/@sergio21landaeta/cyclistic-bike-share-data-analyst-project-ac4bde88d656>
